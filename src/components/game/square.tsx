@@ -16,7 +16,7 @@ const Square: React.FC<SquareProps> = props => {
         <button className={"square"} onClick={() => {
             props.onClick()
         }}>
-            {props.value ? props.value : '　'}
+            {props.value}
         </button>
     )
 }

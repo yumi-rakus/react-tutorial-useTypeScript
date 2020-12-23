@@ -74,10 +74,7 @@ class Game extends React.Component<GameProps, GameState> {
         }
 
         // playerがどちらなのか判断しマークする
-        squares[i] = this.state.xIsNext ? 'X' : '○';
-
-        // console.log('history: ', history)
-        // console.log('history.concat({squares: squares}): ', history.concat({squares: squares}))
+        squares[i] = this.state.xIsNext ? 'X' : 'O';
 
         // stateの更新
         this.setState({
@@ -89,7 +86,7 @@ class Game extends React.Component<GameProps, GameState> {
         });
     }
 
-    // squaresを選択した履歴の状態に戻すメソッド
+    // squaresを選択した履歴の状態に戻すメソッド(この時点でhistoryは再セットされない)
     jumpTo(step: number) {
         this.setState({
             stepNumber: step,
